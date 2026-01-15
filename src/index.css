@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'JetBrains Mono', 'Menlo', monospace; /* New for "Data" feel */
+
+  --color-atlas-bg: #030303; /* Darker than before */
+  --color-atlas-card: #080808;
+  --color-atlas-border: #1a1a1a;
+  --color-atlas-text: #888888;
+  --color-atlas-accent: #e5e5e5;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  background-color: var(--color-atlas-bg);
+  color: #e5e5e5;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; /* Critical for "crisp" text */
+}
+
+/* Cinematic Grain Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  filter: contrast(170%) brightness(1000%);
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
