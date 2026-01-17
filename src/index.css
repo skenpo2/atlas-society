@@ -1,15 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: 'Playfair Display', serif;
-  --font-mono: 'JetBrains Mono', 'Menlo', monospace; /* New for "Data" feel */
 
-  --color-atlas-bg: #030303; /* Darker than before */
-  --color-atlas-card: #080808;
-  --color-atlas-border: #1a1a1a;
-  --color-atlas-text: #888888;
-  --color-atlas-accent: #e5e5e5;
+  --color-atlas-bg: #050505;
+  --color-atlas-card: #0a0a0a;
+  --color-atlas-border: #1f1f1f;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -19,10 +16,10 @@ body {
   color: #e5e5e5;
   font-family: var(--font-sans);
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased; /* Critical for "crisp" text */
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Cinematic Grain Overlay */
+/* Cinematic Grain */
 .noise-overlay {
   position: fixed;
   top: 0;
@@ -31,7 +28,7 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.04;
   background-image: url('https://grainy-gradients.vercel.app/noise.svg');
   filter: contrast(170%) brightness(1000%);
 }
